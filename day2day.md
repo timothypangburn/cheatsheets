@@ -119,6 +119,7 @@ bindkey -v
 systemctl list-unit-files | grep enabled
 
 #### Route traffic correctly if on VPN to HQ
+#### for WiFi using the 10.0.0.0/8 address space
 
 sudo ip route add 10.1.0.0/16 via 10.249.253.225 dev tun0 
 
@@ -148,7 +149,7 @@ dpkg -l | grep -e mysql -e mariadb
 
 * cat /etc/apt/apt.conf.d/20auto-upgradesAPT::Periodic::Update-Package-Lists "1";APT::Periodic::Unattended-Upgrade "1";
 
-Find files 1 day old
+### Find files 1 day old
 
 find . -type f -mtime -1 -printf '%s\n' | awk '{total=total+$1}END{print total/1024000000}'
 
