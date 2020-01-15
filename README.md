@@ -1,2 +1,2 @@
-# cheatsheet-daytoday
-A day to day cheat sheet of commands that I use offen
+# Cheat Sheet
+Various commands for tools and applications that I use most offen
