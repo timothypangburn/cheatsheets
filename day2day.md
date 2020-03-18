@@ -76,6 +76,10 @@ sudo route add -net 192.168.10.108 netmask 255.255.255.255 tun0
 
 sudo route del -net 192.168.10.108 netmask 255.255.255.255 tun0
 
+###### better 
+
+sudo ip route add 192.168.10.108/32 via  tun0
+
 ###### Kill off Many Processes
 
 for pid in $(ps -ef | awk '/process_cf/ {print $2}'); do kill -9 $pid; done
@@ -145,9 +149,9 @@ dpkg -l | grep -e mysql -e mariadb
 
 #### Remove Ubuntu Unattended Upgrades
 
-* sudo apt-get remove unattended-upgradessudo systemctl stop apt-daily.timersudo systemctl disable apt-daily.timersudo systemctl disable apt-daily.servicesudo systemctl daemon-reload
+* sudo apt-get remove unattended-upgrades && sudo systemctl stop apt-daily.timer && sudo systemctl disable apt-daily.timer && sudo systemctl disable apt-daily.service && sudo systemctl daemon-reload
 
-* cat /etc/apt/apt.conf.d/20auto-upgradesAPT::Periodic::Update-Package-Lists "1";APT::Periodic::Unattended-Upgrade "1";
+* cat /etc/apt/apt.conf.d/20auto-upgrades && APT::Periodic::Update-Package-Lists "1"; && APT::Periodic::Unattended-Upgrade "1";
 
 ### Find files 1 day old
 
@@ -157,3 +161,5 @@ find . -type f -mtime -1 -printf '%s\n' | awk '{total=total+$1}END{print total/1
 
 $ chage -I -1 -m 0 -M 99999 -E -1 <username>
 
+#### SSH Passphrase Remember
+ssh-add ~/.ssh/id_rsa 
