@@ -163,3 +163,11 @@ $ chage -I -1 -m 0 -M 99999 -E -1 <username>
 
 #### SSH Passphrase Remember
 ssh-add ~/.ssh/id_rsa 
+
+## chroot Failed Drive
+### Attach data drive with filesystem
+$ mount /dev/sdb3 /mnt/drive
+### Attach boot director if on seperate partition of drive
+$ mount /dev/sdb1 /mnt/drive/boot
+### chroot into system
+$ chroot /mnt/drive
