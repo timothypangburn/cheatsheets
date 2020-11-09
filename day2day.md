@@ -171,3 +171,22 @@ $ mount /dev/sdb3 /mnt/drive
 $ mount /dev/sdb1 /mnt/drive/boot
 ### chroot into system
 $ chroot /mnt/drive
+
+## Clear a log file without deleting it
+### redirecti to null
+```sh
+$ > access.log
+```
+### cat /dev/null
+```sh
+$ > access.log
+```
+### cp /dev/null
+```sh
+$ cp /dev/null  access.log
+```
+### dd /dev/null
+```sh
+$ dd if=/dev/null  of=access.log
+```
+
