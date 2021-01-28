@@ -37,3 +37,5 @@ $ docker run -d -p 9200:9200 --volume="fg20es23-data-vol:/data/fg20es23:rw" wild
 
 ### Docker Connect to a Container with Bash
 docker exec -it container-name /bin/bash
+#### or
+docker exec -it container-name /bin/sh

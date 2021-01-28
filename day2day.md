@@ -169,6 +169,10 @@ ssh-add ~/.ssh/id_rsa
 $ mount /dev/sdb3 /mnt/drive
 ### Attach boot director if on seperate partition of drive
 $ mount /dev/sdb1 /mnt/drive/boot
+$ sudo mount -o bind /proc /mnt/drive/proc
+$ sudo mount -o bind /dev /mnt/drive/dev
+$ sudo mount -o bind /sys /mnt/drive/sys
+$ sudo mount -o bind /run /mnt/drive/run
 ### chroot into system
 $ chroot /mnt/drive
 
