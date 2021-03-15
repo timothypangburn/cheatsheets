@@ -15,3 +15,5 @@ wget -q $URL/Release.key -O- | sudo apt-key add -
 ```sh
 sudo apt update
 ```
+## Run File Daemon in debug mode
+sudo /usr/sbin/bareos-fd -f -d 1000 -c /etc/bareos/bareos-fd.conf
