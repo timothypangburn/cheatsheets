@@ -1,5 +1,7 @@
 ### Restore a VM from a Backup - override original
+```
 qmrestore /mnt/pve/proxmoxstore/dump/vzdump-qemu-306-2017_09_26-19_01_49.vma.gz 306 -storage castle-prod-p1 -force true
+```
 
 ### Find missing hotplug memeory in VM
 ```
@@ -16,4 +18,7 @@ do
     fi
 done
 ```
-
+## Status on a VM
+```
+$ qm status --verbose true 162
+```
