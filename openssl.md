@@ -1,4 +1,4 @@
-# Tips and tricke for opensssl commands
+# Tips and tricks for opensssl commands
 
 ## Re-encrypt your key with a different encryption algrothirm
 ```sh
