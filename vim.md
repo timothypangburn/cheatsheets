@@ -14,3 +14,8 @@ CTRL-A
 ### Increae multiple numbers in list
 CTRL-V  and highligh column of numbres
 CTRL-A
+## Derement numbers under cursor
+CTRL-X
+### Derement multiple numbers in list
+CTRL-V  and highligh column of numbres
+CTRL-X
