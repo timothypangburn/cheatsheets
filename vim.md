@@ -8,3 +8,9 @@
 
 ## Set color scheme
 :colorscheme elflord
+
+## Increate numbers under cursor
+CTRL-A
+### Increae multiple numbers in list
+CTRL-V  and highligh column of numbres
+CTRL-A
