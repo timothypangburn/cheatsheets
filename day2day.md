@@ -193,4 +193,23 @@ $ cp /dev/null  access.log
 ```sh
 $ dd if=/dev/null  of=access.log
 ```
+### Delete all files no matter number from directory
+``` sh
+$ perl -e 'for(<*>){((stat)[9]<(unlink))}'
+```
 
+## Random Password base64
+```sh
+openssl rand -base64 64 | tr -d '\n' | sed 's/\///g; s/=//g; s/+//g' | head -c 32 | base64 | tr -d '\n' | pbcopy
+alias k8s-gen-secret="openssl rand -base64 64 | tr -d '\n' | sed 's/\///g; s/=//g; s/+//g' | head -c 32 | base64 | tr -d '\n' | pbcopy"
+
+```
+## Linux Journal Cleaning
+###You can diminish the size of the journal by means of these commands:
+```
+journalctl --vacuum-size=100M
+```
+###This will retain the most recent 100M of data.
+```
+journalctl --vacuum-time=10d
+```
