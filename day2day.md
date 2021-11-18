@@ -213,3 +213,17 @@ journalctl --vacuum-size=100M
 ```
 journalctl --vacuum-time=10d
 ```
+
+### Who is logged in
+```
+w
+```
+
+### Get system infomation 
+```
+neofetch
+```
+#### Get system info via ssh (needs to be install on target machine or container )
+```
+ssh username@hostname neofetch
+```
