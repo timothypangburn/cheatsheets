@@ -227,3 +227,13 @@ neofetch
 ```
 ssh username@hostname neofetch
 ```
+
+### Rename with rename multiple files.
+#### Just show what files will be renamed
+```
+rename -n 's/fbi-XXXX/proj-0539/' *.csv
+```
+#### Just rename the files
+```
+rename 's/fbi-XXXX/proj-0539/' *.csv
+```
