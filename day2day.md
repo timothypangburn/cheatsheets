@@ -237,3 +237,7 @@ rename -n 's/fbi-XXXX/proj-0539/' *.csv
 ```
 rename 's/fbi-XXXX/proj-0539/' *.csv
 ```
+### Test DNS Server via IP
+```
+dig @<ip-address> google.com
+```
