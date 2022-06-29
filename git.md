@@ -10,3 +10,19 @@
 7. Push it back to your repo.
 8. Click the Compare & pull request button.
 9. Click Create pull request to open a new pull request.
+
+## Git Push and Merge work between remotes with no central hub
+1. Create a branch of your work 
+    $ git checkout -b <newbranchname>
+2. Push branch to upstream remote ( this assumes you have the remote setup. See remote setup)
+    $ git push -u <upstreamRemoteName> <newbranchname>`
+3. Merge your branch back into your master 
+    $ git checkout master
+    $ git merge <newbranchname>
+4. On remote machine do the same
+    $ git checkout master
+    $ git merge <newbranchname>
+
+## Git - Fetch Remote Branch
+    $ git fetch <upstreamRemoteName> <upstreamBranchName>:<localBranchName>
+  
