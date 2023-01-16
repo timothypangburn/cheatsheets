@@ -26,3 +26,11 @@
 ## Git - Fetch Remote Branch
     $ git fetch <upstreamRemoteName> <upstreamBranchName>:<localBranchName>
   
+## Do not ignore but do further track changes to a file
+```
+$ git update-index --assume-unchanged <file>
+```
+### To start tracking it again
+```
+$ git update-index --no-assume-unchanged <file>
+```

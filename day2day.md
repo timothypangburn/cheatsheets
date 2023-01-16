@@ -241,3 +241,13 @@ rename 's/fbi-XXXX/proj-0539/' *.csv
 ```
 dig @<ip-address> google.com
 ```
+
+### Get the last time a user logged on
+```
+# last <username>
+last tjp
+```
+#### Get last time since a date and/or until a date
+```
+last --since 2018-06-01 08:00 --until 2018-06-15 17:00 tjp
+```
